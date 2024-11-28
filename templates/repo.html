@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all</title>
+</head>
+<body>
+    {% for e in dddd %}
+    {{e}}
+    <br>
+    {% endfor %}
+    <a href="/add">добавить</a>
+    <a href="/search" >поиск</a>
+    <a href="/update">обновить</a>
+    <a href="/stats-api">статистика </a>
+    <table border="1" >
+        <tr>
+          <th>id</th>
+          <th>date</th>
+          <th>model</th>
+          <th>orgtech</th>
+          <th>problemdeskription</th>
+          <th>bioclient</th>
+          <th>numberphone</th>
+          <th>status</th>
+          <th>otvetsvenye</th>
+          <th>enddate</th>
+          <th>comment</th>
+        </tr>
+        {% for el in inside_data %}
+
+        <tr >
+          <td >{{ el.id }}</td>
+          <td id="bb">{{ el.date  }}</td>
+          <td>{{ el.model }}</td>
+          <td>{{ el.orgtech }}</td>
+          <td>{{ el.problemdeskription }}</td>
+          <td>{{ el.bioclient }}</td>
+          <td>{{ el.numberphone }}</td>
+          <td>{{ el.status }}</td>
+          <td>{{ el.otvetsvenye }}</td>
+          <td id="bb">{{ el.enddate }}</td>
+          <td>{{ el.comments }}</td>
+
+        </tr>
+        {% endfor %}
+       
+      </table>
+
+
+
+
+
+
+</body>
+</html>
